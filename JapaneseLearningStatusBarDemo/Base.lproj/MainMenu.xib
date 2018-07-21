@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="JapaneseLearningStatusBarDemo" customModuleProvider="target"/>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <customObject id="O67-7h-ZI5" customClass="StatusMenuController" customModule="JapaneseLearningStatusBarDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="displayView" destination="1Cd-sW-cTM" id="2kw-19-Gmi"/>
+                <outlet property="statusMenu" destination="OVL-SB-nCR" id="Mqy-Tl-s5I"/>
+            </connections>
+        </customObject>
+        <menu id="OVL-SB-nCR">
+            <items>
+                <menuItem title="Display" id="qu8-bQ-xra">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="q2T-K7-mcu"/>
+                <menuItem title="Quit" id="rGW-xI-MVF">
+                    <attributedString key="attributedTitle"/>
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitClick:" target="O67-7h-ZI5" id="Sln-X4-fOq"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="O67-7h-ZI5" id="DQd-jW-mI4"/>
+            </connections>
+            <point key="canvasLocation" x="-53" y="-32"/>
+        </menu>
+        <customView id="1Cd-sW-cTM" customClass="DisplayView" customModule="JapaneseLearningStatusBarDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="680" height="182"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GjJ-BQ-Bvy">
+                    <rect key="frame" x="20" y="61" width="200" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="center" title="Start" id="pFP-h2-D9D">
+                        <font key="font" metaFont="system" size="25"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tvb-ji-O6j">
+                    <rect key="frame" x="240" y="61" width="200" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="center" id="AJA-sh-O89">
+                        <font key="font" metaFont="system" size="25"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVX-lh-tKc">
+                    <rect key="frame" x="460" y="61" width="200" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" lineBreakMode="charWrapping" sendsActionOnEndEditing="YES" alignment="center" id="1zA-2h-Woh">
+                        <font key="font" metaFont="system" size="25"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbf-Ov-27A">
+                    <rect key="frame" x="279" y="13" width="123" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Change Word" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="V4H-Tu-A58">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="changeTango:" target="1Cd-sW-cTM" id="bbQ-77-GUU"/>
+                    </connections>
+                </button>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm8-It-OG8">
+                    <rect key="frame" x="276" y="137" width="70" height="25"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Lesson" id="0CQ-w7-0DJ">
+                        <font key="font" metaFont="system" size="20"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <comboBox verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xHJ-cX-pVd">
+                    <rect key="frame" x="352" y="136" width="54" height="26"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="justified" placeholderString="L1" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="9e7-pX-ICS">
+                        <font key="font" metaFont="system" size="15"/>
+                        <color key="textColor" white="0.0" alpha="0.69836258561643838" colorSpace="deviceWhite"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </comboBoxCell>
+                    <connections>
+                        <action selector="selectLesson:" target="1Cd-sW-cTM" id="XV7-fd-Fzb"/>
+                    </connections>
+                </comboBox>
+            </subviews>
+            <connections>
+                <outlet property="changeWordBtn" destination="hbf-Ov-27A" id="6ol-cW-cKo"/>
+                <outlet property="explainLabel" destination="CVX-lh-tKc" id="3ch-gS-IQq"/>
+                <outlet property="kanaLabel" destination="tvb-ji-O6j" id="Qxa-4h-aY4"/>
+                <outlet property="lessonComboBox" destination="xHJ-cX-pVd" id="ARv-cq-ip4"/>
+                <outlet property="tangoLabel" destination="GjJ-BQ-Bvy" id="gRE-1W-AcN"/>
+            </connections>
+            <point key="canvasLocation" x="-32" y="178"/>
+        </customView>
+    </objects>
+</document>
